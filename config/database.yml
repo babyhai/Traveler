@@ -1,0 +1,26 @@
+
+default: &default
+  adapter: postgresql
+  encoding: unicode
+  username: deploy
+  password: deploy
+  # For details on connection pooling, see Rails configuration guide
+  # http://guides.rubyonrails.org/configuring.html#database-pooling
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
+development:
+  <<: *default
+  database: airtry_development
+
+
+
+
+test:
+  <<: *default
+  database: airtry_test
+
+
+
+production:
+  <<: *default
+  database: airtry_production

@@ -1,0 +1,252 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import "toastr";
+
+//whole
+
+body{
+  color: #444;
+  background-color: #f3f3f3;
+  font-weight: 500;
+}
+
+a{
+  color: #00A699;
+}
+a:hover{
+  color: #FF5A5F;
+  text-decoration: none;
+}
+
+//image
+.img-middle{
+  position:relative;
+  top:50%;
+  transform:translateY(-50%);
+}
+
+//form
+
+.form-group select{
+  width: 100%;
+  color: #565a5c;
+  border: 1px solid #00A699;
+  border-radius: 2px;
+  padding: 10px;
+  margin-bottom: 40px;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+.select:before{
+  content: '\25bc';
+  font-size: 1.2em;
+  position: absolute;
+  color: #00A699;
+  top: 40px;
+  right: 30px;
+  transform: scale(0.94, 0.62);
+}
+
+//photo upload
+.btn-file{
+  position: relative;
+  overflow: hidden;
+  border-color: #888;
+  padding: 20px 50px;
+}
+
+.btn-file input[type=file]{
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  left: 0px;
+  bottom: 0px;
+  filter: alpha(opacity=0);
+  opacity: 0;
+  background: white;
+  cursor: inherit;
+  display: block;
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+}
+
+//bootstrap
+
+a.navbar-brand{
+  color: #FF5A5F !important;
+}
+
+.card-header{
+  color: #fff;
+  background-color: #00A699;
+}
+
+.btn-primary{
+  background-color: #FF5A5F;
+  border-color: #FF5A5F;
+}
+
+.btn-primary:hover{
+  background-color: #FF3A3F;
+  border-color: #FF5A5F;
+}
+
+.btn-primary:disabled{
+  background-color: #FF5A5F;
+  border-color: #FF5A5F;
+}
+
+.btn-primary{
+  background-color: #FF5A5F;
+  border-color: #FF5A5F;
+}
+
+.btn-info:hover{
+  background-color: #009689;
+  border-color: #00A699;
+}
+
+.btn-info{
+  background-color: #00A699;
+  border-color: #00A699;
+}
+
+.btn-nav{
+  padding: 0px;
+  margin-top: 0px;
+  color: white;
+}
+
+.list-group-item.active {
+  background-color: #00A699;
+  border-color: #00A699;
+}
+
+//reservations
+.reservation-table td {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid #dce0e0;
+  padding: 10px;
+}
+
+.reservation-table .total td {
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+}
+
+.form-control .datepicker{
+  color: #00A699;
+  background-color: white;
+  border: 1px solid #00A699;
+  text-align: center;
+}
+
+.message-alert{
+  color: #d43242;
+  font-size: 14px;
+  padding-top: 15px;
+}
+
+//search page
+#main{
+  height: 100%;
+  overflow: hidden;
+}
+
+.map_price{
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: #00A699;
+}
+
+#left{
+  position: fixed;
+  top: 70px;
+  left: 10px;
+  bottom: 0;
+  overflow-y: scroll;
+}
+
+#right{
+  position: fixed;
+  top: 70px;
+  right: 0;
+  bottom: 0;
+  width: 450px;
+}
+
+//home page
+.banner{
+  margin-top: 30px;
+  margin-bottom: 50px;
+}
+.discovery-card{
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+}
+
+//others
+
+.color-red{
+  color: #FF5A5F; 
+}
+
+.color-info{
+  color: #00A699;
+}
+
+.amenities li{
+  line-style-type: none;
+  margin-bottom: 10px;
+}
+
+.amenities li{
+  line-style-type: none;
+  margin-bottom: 10px;
+}
+
+.text-line-through{
+	text-decoration: line-through;
+  color: rgba(0,0,0,0.45);
+}
+
+.avatar_small{
+  width: 28px;
+}
+
+.avatar_middle{
+  width: 70px;
+}
+
+#carouselExampleIndicators{
+  width: 100%;
+}
+
+#carouselExampleIndicators .carousel-item{
+  height: 300px;
+  overflow: hidden;
+}
+
+.ui-widget-header{
+  background: #00A699;
+}
