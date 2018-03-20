@@ -59,7 +59,7 @@ gem 'therubyracer', :platforms => :ruby
 gem 'devise', '~> 4.3.0'
 gem 'toastr-rails', '~> 1.0.3'
 gem 'jquery-rails', '~> 4.3.1'
-gem 'paperclip', '~> 5.1.0'
+gem 'paperclip', '~> 5.2.0'
 
 # 地理坐标
 gem 'geocoder', '~> 1.4.4'
