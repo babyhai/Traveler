@@ -12,10 +12,7 @@
 
 ActiveRecord::Schema.define(version: 20170812016436) do
 
-  # These are extensions that must be enabled in order to support this database
-  enable_extension "plpgsql"
-
-  create_table "reservations", force: :cascade do |t|
+  create_table "reservations", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "user_id"
     t.bigint "room_id"
     t.datetime "start_date"
@@ -28,7 +25,7 @@ ActiveRecord::Schema.define(version: 20170812016436) do
     t.index ["user_id"], name: "index_reservations_on_user_id"
   end
 
-  create_table "reviews", force: :cascade do |t|
+  create_table "reviews", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.text "comment"
     t.integer "star", default: 1
     t.bigint "room_id"
@@ -44,7 +41,7 @@ ActiveRecord::Schema.define(version: 20170812016436) do
     t.index ["room_id"], name: "index_reviews_on_room_id"
   end
 
-  create_table "roomphotos", force: :cascade do |t|
+  create_table "roomphotos", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.bigint "room_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -55,7 +52,7 @@ ActiveRecord::Schema.define(version: 20170812016436) do
     t.index ["room_id"], name: "index_roomphotos_on_room_id"
   end
 
-  create_table "rooms", force: :cascade do |t|
+  create_table "rooms", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "home_type"
     t.string "room_type"
     t.integer "accommodate"
@@ -74,12 +71,12 @@ ActiveRecord::Schema.define(version: 20170812016436) do
     t.bigint "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.float "longitude"
-    t.float "latitude"
+    t.float "longitude", limit: 24
+    t.float "latitude", limit: 24
     t.index ["user_id"], name: "index_rooms_on_user_id"
   end
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: :cascade, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8" do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
     t.string "reset_password_token"
@@ -98,6 +95,7 @@ ActiveRecord::Schema.define(version: 20170812016436) do
     t.datetime "confirmation_sent_at"
     t.string "phone_number"
     t.text "description"
+    t.string "unconfirmed_email"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

@@ -1,6 +1,6 @@
 <%= render 'room_header' %>
   <div class="card-header">
-    Location
+    位置
   </div>
   <div class="card-body">
     <div class="container">
@@ -8,13 +8,13 @@
 
         <div class="row">
           <div class="form-group w-100">
-            <label>Address</label>
+            <label>地址</label>
             <%= f.text_field :address, placeholder:"What's your address?", class: "form-control" %>
           </div>
         </div>
 
         <div class="text-center">
-          <%= f.submit "Save", class: "btn btn-info w-50" %>
+          <%= f.submit "保存", class: "btn btn-info w-50" %>
         </div>
 
       <% end %>

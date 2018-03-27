@@ -34,13 +34,13 @@
               <%= current_user.fullname %>
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-              <%= link_to "Manage Listing", rooms_path, class: "dropdown-item" %>
-              <%= link_to "List Your Space", new_room_path, class: "dropdown-item" %>
-              <%= link_to "Your Reservations", myreservations_path, class: "dropdown-item" %>
-              <%= link_to "Your Trips", mytrips_path, class: "dropdown-item" %>
+              <%= link_to "管理房源", rooms_path, class: "dropdown-item" %>
+              <%= link_to "创建新的房间", new_room_path, class: "dropdown-item" %>
+              <%= link_to "您的预订", myreservations_path, class: "dropdown-item" %>
+              <%= link_to "您的旅程", mytrips_path, class: "dropdown-item" %>
               <div class="dropdown-divider"></div>
-              <%= link_to "Edit", edit_user_registration_path, class: "dropdown-item" %>
-              <%= link_to "Sign Out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              <%= link_to "编辑", edit_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "退出", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
         <% end %>

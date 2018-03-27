@@ -18,7 +18,7 @@ Rails.application.configure do
 
     config.cache_store = :memory_store
     config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.seconds.to_i}"
+        'Cache-Control' => "public, max-age=#{2.days.seconds.to_i}"
     }
   else
     config.action_controller.perform_caching = false
@@ -52,18 +52,18 @@ Rails.application.configure do
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
 
-  config.action_mailer.default_url_options = { host: '0.0.0.0', port: 80 }
+  config.action_mailer.default_url_options = { :host => 'localhost:3000' }
 
   config.action_mailer.delivery_method = :smtp
 
   config.action_mailer.smtp_settings = {
-    address: "smtp.yeah.net",
-    port: 25,
-    domain: "yeah.net",
-    enable_starttls_auto: true,
-    user_name: 'rushuiweiyu',
-    password: 'rushuiweiyu123',
-    openssl_verify_mode: 'none'
+      address: "smtp.163.com",
+      port: 25,
+      domain: "163.com",
+      enable_starttls_auto: true,
+      user_name: 'haleyme',
+      password: 'raoziyu21',
+      openssl_verify_mode: 'none'
   }
 
 end

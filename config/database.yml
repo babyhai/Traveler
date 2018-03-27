@@ -1,26 +1,31 @@
 
 default: &default
-  adapter: postgresql
-  encoding: unicode
+  adapter: mysql2
+  encoding: utf8
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   username: deploy
   password: deploy
-  # For details on connection pooling, see Rails configuration guide
-  # http://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  host: 127.0.0.1
 
 development:
   <<: *default
-  database: airtry_development
-
+  database: airtrys_development
 
 
 
 test:
   <<: *default
-  database: airtry_test
-
+  database: airtrys_test
 
 
 production:
   <<: *default
-  database: airtry_production
+  database: airtrys_production
+  username: deploy
+  password: <%= ENV['BOOKS_DATABASE_PASSWORD'] %>
+
+
+
+
+
+

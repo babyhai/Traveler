@@ -1,8 +1,6 @@
 Rails.application.routes.draw do
-
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-
   root 'pages#home'
+
 
   devise_for  :users,
               path: '',
@@ -33,5 +31,7 @@ Rails.application.routes.draw do
   get '/mytrips' => 'reservations#mytrips'
   get '/myreservations' => 'reservations#myreservations'
   get 'search' => 'pages#search'
+
+
 
 end
