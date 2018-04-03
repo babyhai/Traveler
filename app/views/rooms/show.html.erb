@@ -45,7 +45,7 @@
       </div>
       <div class="row text-center w-100">
         <div class="col-md-3"><%= @room.home_type %></div>
-        <div class="col-md-3"><%= pluralize(@room.accommodate, "入住人数") %></div>
+        <div class="col-md-3"><%= pluralize(@room.accommodate, "可住") %></div>
         <div class="col-md-3"><%= pluralize(@room.bed_room, "卧室") %></div>
         <div class="col-md-3"><%= pluralize(@room.bath_room, "浴室") %></div>
       </div>
@@ -83,6 +83,9 @@
       </div>
     </div>
     <hr>
+
+   <!-- 预订须知 -->
+    <%= render :partial => 'booking' %>
 
     <!-- photos -->
     <div class="row">
