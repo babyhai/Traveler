@@ -29,6 +29,8 @@ gem 'jbuilder', '~> 2.5'
 # gem 'bcrypt', '~> 3.1.7'
 
 
+
+
 # gem 'capistrano-rails', group: :development
 
 group :development, :test do
@@ -60,6 +62,7 @@ gem 'paperclip', '~> 5.2.0'
 
 # 地理坐标
 gem 'geocoder', '~> 1.4.4'
+
 
 
 gem 'jquery-ui-rails', '~> 6.0.1'

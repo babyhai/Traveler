@@ -1,6 +1,6 @@
 <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal_<%= reservation.id %>">
-  Review Guest
+  审查客人
 </button>
 
 <!-- Modal -->
@@ -8,7 +8,7 @@
   <div class="modal-dialog" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Review Your Guest</h5>
+        <h5 class="modal-title" id="exampleModalLabel">检查你的客人</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -25,7 +25,7 @@
           <%= f.hidden_field :reservation_id, value: reservation.id %>
           <%= f.hidden_field :guest_id, value: reservation.user.id %>
           <div class="text-center">
-            <%= f.submit "Add Review", class: "btn btn-primary" %>
+            <%= f.submit "添加评论", class: "btn btn-primary" %>
           </div>
         <% end %>
       </div>

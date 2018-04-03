@@ -45,9 +45,9 @@
       </div>
       <div class="row text-center w-100">
         <div class="col-md-3"><%= @room.home_type %></div>
-        <div class="col-md-3"><%= pluralize(@room.accommodate, "Guest") %></div>
-        <div class="col-md-3"><%= pluralize(@room.bed_room, "Bedroom") %></div>
-        <div class="col-md-3"><%= pluralize(@room.bath_room, "Bathroom") %></div>
+        <div class="col-md-3"><%= pluralize(@room.accommodate, "入住人数") %></div>
+        <div class="col-md-3"><%= pluralize(@room.bed_room, "卧室") %></div>
+        <div class="col-md-3"><%= pluralize(@room.bath_room, "浴室") %></div>
       </div>
     </div>
     <hr>
@@ -55,7 +55,7 @@
     <!-- description -->
     <div class="row">
       <div class="col-md-12">
-        <h4>About this Listing</h4>
+        <h4>描述</h4>
         <p><%= @room.summary %></p>
       </div>
     </div>
@@ -64,19 +64,19 @@
     <!-- amenities -->
     <div class="row">
       <div class="col-md-12">
-        <h4>Amentities</h4>
+        <h4>配套</h4>
         <div class="row amenities">
           <div class="col-md-6">
             <ul>
-              <li class="<%= 'text-line-through' if !@room.is_tv %>">TV</li>
-              <li class="<%= 'text-line-through' if !@room.is_kitchen %>">Kitchen</li>
-              <li class="<%= 'text-line-through' if !@room.is_internet %>">Internet</li>
+              <li class="<%= 'text-line-through' if !@room.is_tv %>">电视</li>
+              <li class="<%= 'text-line-through' if !@room.is_kitchen %>">厨房</li>
+              <li class="<%= 'text-line-through' if !@room.is_internet %>">Wi-Fi</li>
             </ul>
           </div>
           <div class="col-md-6">
             <ul>
-              <li class="<%= 'text-line-through' if !@room.is_heating %>">Heating</li>
-              <li class="<%= 'text-line-through' if !@room.is_air %>">Air Conditioning</li>
+              <li class="<%= 'text-line-through' if !@room.is_heating %>">热水器</li>
+              <li class="<%= 'text-line-through' if !@room.is_air %>">空调</li>
             </ul>
           </div>
         </div>
@@ -158,7 +158,7 @@
     <!-- nearby -->
     <div class="row">
       <div class="col-md-12">
-        <h4>Near By</h4>
+        <h4>推荐房源</h4>
       <div class="row">
       <% if @room.nearbys(10) %>
         <%= render partial: "rooms/rooms_list", locals: {rooms:  @room.nearbys(10).max(6)} %>

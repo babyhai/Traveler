@@ -11,32 +11,38 @@
 
               <div class="col-md-4 select">
                 <label>房间类型</label>
-                <%= f.select :home_type, [["Apartment","Apartment"], ["House", "House"], ["Bed & Breakfast", "Bed & Breakfast"]],
-                             id: "home_type", prompt: "Select...", class: "form_control" %>
+                <%= f.select :home_type, [["公寓","公寓"], ["House", "House"], ["Bed & Breakfast", "Bed & Breakfast"]],
+                             id: "home_type", prompt: "选择...", class: "form_control" %>
               </div>
 
               <div class="col-md-4 select">
                 <label>房型</label>
                 <%= f.select :room_type, [["Entire","Entire"], ["Private", "Private"], ["Shared", "Shared"]],
-                             id: "room_type", prompt: "Select...", class: "form_control" %>
+                             id: "room_type", prompt: "选择...", class: "form_control" %>
               </div>
 
               <div class="col-md-4 select">
-                <label>可容纳</label>
+                <label>入住人数</label>
                 <%= f.select :accommodate, [["1",1], ["2", 2], ["3", 3], ["4", 4]],
-                             id: "accommodate", prompt: "Select...", class: "form_control" %>
+                             id: "accommodate", prompt: "选择...", class: "form_control" %>
               </div>
 
               <div class="col-md-4 select">
                 <label>卧室</label>
                 <%= f.select :bed_room, [["1",1], ["2", 2], ["3", 3], ["4", 4]],
-                             id: "bed_room", prompt: "Select...", class: "form_control" %>
+                             id: "bed_room", prompt: "选择...", class: "form_control" %>
+              </div>
+
+              <div class="col-md-4 select">
+                <label>厨房</label>
+                <%= f.select :bed_room, [["1",1], ["2", 2], ["3", 3], ["4", 4]],
+                             id: "bed_room", prompt: "选择...", class: "form_control" %>
               </div>
 
               <div class="col-md-4 select">
                 <label>浴室</label>
                 <%= f.select :bath_room, [["1",1], ["2", 2], ["3", 3], ["4", 4]],
-                             id: "bath_room", prompt: "Select...", class: "form_control" %>
+                             id: "bath_room", prompt: "选择...", class: "form_control" %>
               </div>
 
             </div>

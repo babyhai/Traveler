@@ -1,6 +1,7 @@
 Geocoder.configure(
-  unit: :km,
-  lookup: :geocoder_ca,
-  ip_lookup: :geocoder_ca,
-  timeout: 10
+  :timeout => 10,
+  :lookup => :baidu,
+  :api_key => :"7pqTEduSRi5sf4ihgwfxlh0MIazNepF5",
+  :units => :km,
+
 )

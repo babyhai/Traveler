@@ -1,6 +1,6 @@
 <% if @host_reviews.count==0 %>
   <div class="text-center">
-    <p>There are no reviews</p>
+    <p>暂无评论</p>
   </div>
 <% else %>
   <% @host_reviews.order(id: :desc).each do |r| %>
